@@ -22,7 +22,7 @@ public static class Utils
     /// <summary>Get a byte array literal string such as <c>"new byte[]{1,2,3}"</c></summary>
     public static string ToByteArrayLiteralPresentation(ReadOnlySpan<byte> bytes)
     {
-        string prefix = "new byte[]{";
+        string prefix = "stackalloc byte[]{";
         string suffix = "}";
         var builder = new StringBuilder(capacity: bytes.Length * 4 + prefix.Length + suffix.Length);
         builder.Append(prefix);
